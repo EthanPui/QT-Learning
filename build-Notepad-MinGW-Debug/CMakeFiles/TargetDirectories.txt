@@ -1,9 +1,0 @@
-E:/QT Projects/QT-Learning/build-Notepad-MinGW-Debug/CMakeFiles/Notepad.dir
-E:/QT Projects/QT-Learning/build-Notepad-MinGW-Debug/CMakeFiles/edit_cache.dir
-E:/QT Projects/QT-Learning/build-Notepad-MinGW-Debug/CMakeFiles/rebuild_cache.dir
-E:/QT Projects/QT-Learning/build-Notepad-MinGW-Debug/CMakeFiles/list_install_components.dir
-E:/QT Projects/QT-Learning/build-Notepad-MinGW-Debug/CMakeFiles/install.dir
-E:/QT Projects/QT-Learning/build-Notepad-MinGW-Debug/CMakeFiles/install/local.dir
-E:/QT Projects/QT-Learning/build-Notepad-MinGW-Debug/CMakeFiles/install/strip.dir
-E:/QT Projects/QT-Learning/build-Notepad-MinGW-Debug/CMakeFiles/Notepad_autogen_timestamp_deps.dir
-E:/QT Projects/QT-Learning/build-Notepad-MinGW-Debug/CMakeFiles/Notepad_autogen.dir
