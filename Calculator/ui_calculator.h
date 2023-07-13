@@ -26,26 +26,26 @@ class Ui_Calculator
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
-    QPushButton *pushButton_6;
-    QPushButton *pushButton_11;
-    QPushButton *pushButton_7;
-    QPushButton *pushButton;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton_8;
-    QPushButton *pushButton_10;
-    QPushButton *pushButton_9;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_12;
-    QPushButton *pushButton_13;
-    QPushButton *pushButton_14;
-    QPushButton *pushButton_15;
-    QPushButton *pushButton_16;
-    QPushButton *pushButton_17;
-    QPushButton *pushButton_18;
-    QPushButton *pushButton_19;
-    QPushButton *pushButton_20;
+    QPushButton *Button5;
+    QPushButton *Button1;
+    QPushButton *Button4;
+    QPushButton *Button7;
+    QPushButton *MemAdd;
+    QPushButton *Button6;
+    QPushButton *MemClear;
+    QPushButton *Multiply;
+    QPushButton *Divide;
+    QPushButton *Button8;
+    QPushButton *Button9;
+    QPushButton *Clear;
+    QPushButton *Button2;
+    QPushButton *Button0;
+    QPushButton *Button3;
+    QPushButton *ChangeSign;
+    QPushButton *Subtract;
+    QPushButton *Add;
+    QPushButton *MemGet;
+    QPushButton *Equals;
     QLineEdit *Display;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -54,21 +54,22 @@ public:
     {
         if (Calculator->objectName().isEmpty())
             Calculator->setObjectName("Calculator");
-        Calculator->resize(475, 332);
+        Calculator->resize(475, 282);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(Calculator->sizePolicy().hasHeightForWidth());
         Calculator->setSizePolicy(sizePolicy);
+        Calculator->setAutoFillBackground(false);
         centralwidget = new QWidget(Calculator);
         centralwidget->setObjectName("centralwidget");
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName("gridLayout");
-        pushButton_6 = new QPushButton(centralwidget);
-        pushButton_6->setObjectName("pushButton_6");
-        sizePolicy.setHeightForWidth(pushButton_6->sizePolicy().hasHeightForWidth());
-        pushButton_6->setSizePolicy(sizePolicy);
-        pushButton_6->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        Button5 = new QPushButton(centralwidget);
+        Button5->setObjectName("Button5");
+        sizePolicy.setHeightForWidth(Button5->sizePolicy().hasHeightForWidth());
+        Button5->setSizePolicy(sizePolicy);
+        Button5->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	Background-color: #C0C0C0;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
@@ -80,13 +81,13 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_6, 2, 1, 1, 1);
+        gridLayout->addWidget(Button5, 2, 1, 1, 1);
 
-        pushButton_11 = new QPushButton(centralwidget);
-        pushButton_11->setObjectName("pushButton_11");
-        sizePolicy.setHeightForWidth(pushButton_11->sizePolicy().hasHeightForWidth());
-        pushButton_11->setSizePolicy(sizePolicy);
-        pushButton_11->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        Button1 = new QPushButton(centralwidget);
+        Button1->setObjectName("Button1");
+        sizePolicy.setHeightForWidth(Button1->sizePolicy().hasHeightForWidth());
+        Button1->setSizePolicy(sizePolicy);
+        Button1->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	Background-color: #C0C0C0;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
@@ -98,13 +99,13 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_11, 3, 0, 1, 1);
+        gridLayout->addWidget(Button1, 3, 0, 1, 1);
 
-        pushButton_7 = new QPushButton(centralwidget);
-        pushButton_7->setObjectName("pushButton_7");
-        sizePolicy.setHeightForWidth(pushButton_7->sizePolicy().hasHeightForWidth());
-        pushButton_7->setSizePolicy(sizePolicy);
-        pushButton_7->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        Button4 = new QPushButton(centralwidget);
+        Button4->setObjectName("Button4");
+        sizePolicy.setHeightForWidth(Button4->sizePolicy().hasHeightForWidth());
+        Button4->setSizePolicy(sizePolicy);
+        Button4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	Background-color: #C0C0C0;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
@@ -116,13 +117,13 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_7, 2, 0, 1, 1);
+        gridLayout->addWidget(Button4, 2, 0, 1, 1);
 
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy);
-        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        Button7 = new QPushButton(centralwidget);
+        Button7->setObjectName("Button7");
+        sizePolicy.setHeightForWidth(Button7->sizePolicy().hasHeightForWidth());
+        Button7->setSizePolicy(sizePolicy);
+        Button7->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	Background-color: #C0C0C0;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
@@ -134,13 +135,31 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton, 1, 0, 1, 1);
+        gridLayout->addWidget(Button7, 1, 0, 1, 1);
 
-        pushButton_5 = new QPushButton(centralwidget);
-        pushButton_5->setObjectName("pushButton_5");
-        sizePolicy.setHeightForWidth(pushButton_5->sizePolicy().hasHeightForWidth());
-        pushButton_5->setSizePolicy(sizePolicy);
-        pushButton_5->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        MemAdd = new QPushButton(centralwidget);
+        MemAdd->setObjectName("MemAdd");
+        sizePolicy.setHeightForWidth(MemAdd->sizePolicy().hasHeightForWidth());
+        MemAdd->setSizePolicy(sizePolicy);
+        MemAdd->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	Background-color: #F90;\n"
+"	border: 1px solid gray;\n"
+"	padding: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	Background-color: #A9A9A9;\n"
+"	border: 1px solid gray;\n"
+"	padding: 5px;\n"
+"}"));
+
+        gridLayout->addWidget(MemAdd, 1, 4, 1, 1);
+
+        Button6 = new QPushButton(centralwidget);
+        Button6->setObjectName("Button6");
+        sizePolicy.setHeightForWidth(Button6->sizePolicy().hasHeightForWidth());
+        Button6->setSizePolicy(sizePolicy);
+        Button6->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	Background-color: #C0C0C0;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
@@ -152,13 +171,67 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_5, 1, 4, 1, 1);
+        gridLayout->addWidget(Button6, 2, 2, 1, 1);
 
-        pushButton_8 = new QPushButton(centralwidget);
-        pushButton_8->setObjectName("pushButton_8");
-        sizePolicy.setHeightForWidth(pushButton_8->sizePolicy().hasHeightForWidth());
-        pushButton_8->setSizePolicy(sizePolicy);
-        pushButton_8->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        MemClear = new QPushButton(centralwidget);
+        MemClear->setObjectName("MemClear");
+        sizePolicy.setHeightForWidth(MemClear->sizePolicy().hasHeightForWidth());
+        MemClear->setSizePolicy(sizePolicy);
+        MemClear->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	Background-color: #F90;\n"
+"	border: 1px solid gray;\n"
+"	padding: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	Background-color: #A9A9A9;\n"
+"	border: 1px solid gray;\n"
+"	padding: 5px;\n"
+"}"));
+
+        gridLayout->addWidget(MemClear, 2, 4, 1, 1);
+
+        Multiply = new QPushButton(centralwidget);
+        Multiply->setObjectName("Multiply");
+        sizePolicy.setHeightForWidth(Multiply->sizePolicy().hasHeightForWidth());
+        Multiply->setSizePolicy(sizePolicy);
+        Multiply->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	Background-color: #F90;\n"
+"	border: 1px solid gray;\n"
+"	padding: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	Background-color: #A9A9A9;\n"
+"	border: 1px solid gray;\n"
+"	padding: 5px;\n"
+"}"));
+
+        gridLayout->addWidget(Multiply, 2, 3, 1, 1);
+
+        Divide = new QPushButton(centralwidget);
+        Divide->setObjectName("Divide");
+        sizePolicy.setHeightForWidth(Divide->sizePolicy().hasHeightForWidth());
+        Divide->setSizePolicy(sizePolicy);
+        Divide->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	Background-color: #F90;\n"
+"	border: 1px solid gray;\n"
+"	padding: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	Background-color: #A9A9A9;\n"
+"	border: 1px solid gray;\n"
+"	padding: 5px;\n"
+"}"));
+
+        gridLayout->addWidget(Divide, 1, 3, 1, 1);
+
+        Button8 = new QPushButton(centralwidget);
+        Button8->setObjectName("Button8");
+        sizePolicy.setHeightForWidth(Button8->sizePolicy().hasHeightForWidth());
+        Button8->setSizePolicy(sizePolicy);
+        Button8->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	Background-color: #C0C0C0;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
@@ -170,13 +243,13 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_8, 2, 2, 1, 1);
+        gridLayout->addWidget(Button8, 1, 1, 1, 1);
 
-        pushButton_10 = new QPushButton(centralwidget);
-        pushButton_10->setObjectName("pushButton_10");
-        sizePolicy.setHeightForWidth(pushButton_10->sizePolicy().hasHeightForWidth());
-        pushButton_10->setSizePolicy(sizePolicy);
-        pushButton_10->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        Button9 = new QPushButton(centralwidget);
+        Button9->setObjectName("Button9");
+        sizePolicy.setHeightForWidth(Button9->sizePolicy().hasHeightForWidth());
+        Button9->setSizePolicy(sizePolicy);
+        Button9->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	Background-color: #C0C0C0;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
@@ -188,13 +261,13 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_10, 2, 4, 1, 1);
+        gridLayout->addWidget(Button9, 1, 2, 1, 1);
 
-        pushButton_9 = new QPushButton(centralwidget);
-        pushButton_9->setObjectName("pushButton_9");
-        sizePolicy.setHeightForWidth(pushButton_9->sizePolicy().hasHeightForWidth());
-        pushButton_9->setSizePolicy(sizePolicy);
-        pushButton_9->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        Clear = new QPushButton(centralwidget);
+        Clear->setObjectName("Clear");
+        sizePolicy.setHeightForWidth(Clear->sizePolicy().hasHeightForWidth());
+        Clear->setSizePolicy(sizePolicy);
+        Clear->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	Background-color: #C0C0C0;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
@@ -206,13 +279,13 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_9, 2, 3, 1, 1);
+        gridLayout->addWidget(Clear, 4, 0, 1, 1);
 
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName("pushButton_4");
-        sizePolicy.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
-        pushButton_4->setSizePolicy(sizePolicy);
-        pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        Button2 = new QPushButton(centralwidget);
+        Button2->setObjectName("Button2");
+        sizePolicy.setHeightForWidth(Button2->sizePolicy().hasHeightForWidth());
+        Button2->setSizePolicy(sizePolicy);
+        Button2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	Background-color: #C0C0C0;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
@@ -224,13 +297,13 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_4, 1, 3, 1, 1);
+        gridLayout->addWidget(Button2, 3, 1, 1, 1);
 
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName("pushButton_2");
-        sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
-        pushButton_2->setSizePolicy(sizePolicy);
-        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        Button0 = new QPushButton(centralwidget);
+        Button0->setObjectName("Button0");
+        sizePolicy.setHeightForWidth(Button0->sizePolicy().hasHeightForWidth());
+        Button0->setSizePolicy(sizePolicy);
+        Button0->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	Background-color: #C0C0C0;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
@@ -242,13 +315,13 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_2, 1, 1, 1, 1);
+        gridLayout->addWidget(Button0, 4, 1, 1, 1);
 
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName("pushButton_3");
-        sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
-        pushButton_3->setSizePolicy(sizePolicy);
-        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        Button3 = new QPushButton(centralwidget);
+        Button3->setObjectName("Button3");
+        sizePolicy.setHeightForWidth(Button3->sizePolicy().hasHeightForWidth());
+        Button3->setSizePolicy(sizePolicy);
+        Button3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	Background-color: #C0C0C0;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
@@ -260,13 +333,13 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_3, 1, 2, 1, 1);
+        gridLayout->addWidget(Button3, 3, 2, 1, 1);
 
-        pushButton_12 = new QPushButton(centralwidget);
-        pushButton_12->setObjectName("pushButton_12");
-        sizePolicy.setHeightForWidth(pushButton_12->sizePolicy().hasHeightForWidth());
-        pushButton_12->setSizePolicy(sizePolicy);
-        pushButton_12->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        ChangeSign = new QPushButton(centralwidget);
+        ChangeSign->setObjectName("ChangeSign");
+        sizePolicy.setHeightForWidth(ChangeSign->sizePolicy().hasHeightForWidth());
+        ChangeSign->setSizePolicy(sizePolicy);
+        ChangeSign->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	Background-color: #C0C0C0;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
@@ -278,14 +351,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_12, 4, 0, 1, 1);
+        gridLayout->addWidget(ChangeSign, 4, 2, 1, 1);
 
-        pushButton_13 = new QPushButton(centralwidget);
-        pushButton_13->setObjectName("pushButton_13");
-        sizePolicy.setHeightForWidth(pushButton_13->sizePolicy().hasHeightForWidth());
-        pushButton_13->setSizePolicy(sizePolicy);
-        pushButton_13->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	Background-color: #C0C0C0;\n"
+        Subtract = new QPushButton(centralwidget);
+        Subtract->setObjectName("Subtract");
+        sizePolicy.setHeightForWidth(Subtract->sizePolicy().hasHeightForWidth());
+        Subtract->setSizePolicy(sizePolicy);
+        Subtract->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	Background-color: #F90;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -296,14 +369,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_13, 3, 1, 1, 1);
+        gridLayout->addWidget(Subtract, 4, 3, 1, 1);
 
-        pushButton_14 = new QPushButton(centralwidget);
-        pushButton_14->setObjectName("pushButton_14");
-        sizePolicy.setHeightForWidth(pushButton_14->sizePolicy().hasHeightForWidth());
-        pushButton_14->setSizePolicy(sizePolicy);
-        pushButton_14->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	Background-color: #C0C0C0;\n"
+        Add = new QPushButton(centralwidget);
+        Add->setObjectName("Add");
+        sizePolicy.setHeightForWidth(Add->sizePolicy().hasHeightForWidth());
+        Add->setSizePolicy(sizePolicy);
+        Add->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	Background-color: #F90;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -314,14 +387,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_14, 4, 1, 1, 1);
+        gridLayout->addWidget(Add, 3, 3, 1, 1);
 
-        pushButton_15 = new QPushButton(centralwidget);
-        pushButton_15->setObjectName("pushButton_15");
-        sizePolicy.setHeightForWidth(pushButton_15->sizePolicy().hasHeightForWidth());
-        pushButton_15->setSizePolicy(sizePolicy);
-        pushButton_15->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	Background-color: #C0C0C0;\n"
+        MemGet = new QPushButton(centralwidget);
+        MemGet->setObjectName("MemGet");
+        sizePolicy.setHeightForWidth(MemGet->sizePolicy().hasHeightForWidth());
+        MemGet->setSizePolicy(sizePolicy);
+        MemGet->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	Background-color: #F90;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -332,14 +405,14 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_15, 3, 2, 1, 1);
+        gridLayout->addWidget(MemGet, 3, 4, 1, 1);
 
-        pushButton_16 = new QPushButton(centralwidget);
-        pushButton_16->setObjectName("pushButton_16");
-        sizePolicy.setHeightForWidth(pushButton_16->sizePolicy().hasHeightForWidth());
-        pushButton_16->setSizePolicy(sizePolicy);
-        pushButton_16->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	Background-color: #C0C0C0;\n"
+        Equals = new QPushButton(centralwidget);
+        Equals->setObjectName("Equals");
+        sizePolicy.setHeightForWidth(Equals->sizePolicy().hasHeightForWidth());
+        Equals->setSizePolicy(sizePolicy);
+        Equals->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	Background-color: #F90;\n"
 "	border: 1px solid gray;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -350,79 +423,7 @@ public:
 "	padding: 5px;\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_16, 4, 2, 1, 1);
-
-        pushButton_17 = new QPushButton(centralwidget);
-        pushButton_17->setObjectName("pushButton_17");
-        sizePolicy.setHeightForWidth(pushButton_17->sizePolicy().hasHeightForWidth());
-        pushButton_17->setSizePolicy(sizePolicy);
-        pushButton_17->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	Background-color: #C0C0C0;\n"
-"	border: 1px solid gray;\n"
-"	padding: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"	Background-color: #A9A9A9;\n"
-"	border: 1px solid gray;\n"
-"	padding: 5px;\n"
-"}"));
-
-        gridLayout->addWidget(pushButton_17, 4, 3, 1, 1);
-
-        pushButton_18 = new QPushButton(centralwidget);
-        pushButton_18->setObjectName("pushButton_18");
-        sizePolicy.setHeightForWidth(pushButton_18->sizePolicy().hasHeightForWidth());
-        pushButton_18->setSizePolicy(sizePolicy);
-        pushButton_18->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	Background-color: #C0C0C0;\n"
-"	border: 1px solid gray;\n"
-"	padding: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"	Background-color: #A9A9A9;\n"
-"	border: 1px solid gray;\n"
-"	padding: 5px;\n"
-"}"));
-
-        gridLayout->addWidget(pushButton_18, 3, 3, 1, 1);
-
-        pushButton_19 = new QPushButton(centralwidget);
-        pushButton_19->setObjectName("pushButton_19");
-        sizePolicy.setHeightForWidth(pushButton_19->sizePolicy().hasHeightForWidth());
-        pushButton_19->setSizePolicy(sizePolicy);
-        pushButton_19->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	Background-color: #C0C0C0;\n"
-"	border: 1px solid gray;\n"
-"	padding: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"	Background-color: #A9A9A9;\n"
-"	border: 1px solid gray;\n"
-"	padding: 5px;\n"
-"}"));
-
-        gridLayout->addWidget(pushButton_19, 3, 4, 1, 1);
-
-        pushButton_20 = new QPushButton(centralwidget);
-        pushButton_20->setObjectName("pushButton_20");
-        sizePolicy.setHeightForWidth(pushButton_20->sizePolicy().hasHeightForWidth());
-        pushButton_20->setSizePolicy(sizePolicy);
-        pushButton_20->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	Background-color: #C0C0C0;\n"
-"	border: 1px solid gray;\n"
-"	padding: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"	Background-color: #A9A9A9;\n"
-"	border: 1px solid gray;\n"
-"	padding: 5px;\n"
-"}"));
-
-        gridLayout->addWidget(pushButton_20, 4, 4, 1, 1);
+        gridLayout->addWidget(Equals, 4, 4, 1, 1);
 
         Display = new QLineEdit(centralwidget);
         Display->setObjectName("Display");
@@ -448,7 +449,7 @@ public:
         Calculator->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Calculator);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 475, 21));
+        menubar->setGeometry(QRect(0, 0, 475, 22));
         Calculator->setMenuBar(menubar);
         statusbar = new QStatusBar(Calculator);
         statusbar->setObjectName("statusbar");
@@ -462,26 +463,26 @@ public:
     void retranslateUi(QMainWindow *Calculator)
     {
         Calculator->setWindowTitle(QCoreApplication::translate("Calculator", "Calculator", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("Calculator", "5", nullptr));
-        pushButton_11->setText(QCoreApplication::translate("Calculator", "1", nullptr));
-        pushButton_7->setText(QCoreApplication::translate("Calculator", "4", nullptr));
-        pushButton->setText(QCoreApplication::translate("Calculator", "7", nullptr));
-        pushButton_5->setText(QCoreApplication::translate("Calculator", "M+", nullptr));
-        pushButton_8->setText(QCoreApplication::translate("Calculator", "6", nullptr));
-        pushButton_10->setText(QCoreApplication::translate("Calculator", "M-", nullptr));
-        pushButton_9->setText(QCoreApplication::translate("Calculator", "*", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("Calculator", "/", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("Calculator", "8", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("Calculator", "9", nullptr));
-        pushButton_12->setText(QCoreApplication::translate("Calculator", "AC", nullptr));
-        pushButton_13->setText(QCoreApplication::translate("Calculator", "2", nullptr));
-        pushButton_14->setText(QCoreApplication::translate("Calculator", "0", nullptr));
-        pushButton_15->setText(QCoreApplication::translate("Calculator", "3", nullptr));
-        pushButton_16->setText(QCoreApplication::translate("Calculator", "+/-", nullptr));
-        pushButton_17->setText(QCoreApplication::translate("Calculator", "-", nullptr));
-        pushButton_18->setText(QCoreApplication::translate("Calculator", "+", nullptr));
-        pushButton_19->setText(QCoreApplication::translate("Calculator", "M", nullptr));
-        pushButton_20->setText(QCoreApplication::translate("Calculator", "=", nullptr));
+        Button5->setText(QCoreApplication::translate("Calculator", "5", nullptr));
+        Button1->setText(QCoreApplication::translate("Calculator", "1", nullptr));
+        Button4->setText(QCoreApplication::translate("Calculator", "4", nullptr));
+        Button7->setText(QCoreApplication::translate("Calculator", "7", nullptr));
+        MemAdd->setText(QCoreApplication::translate("Calculator", "M+", nullptr));
+        Button6->setText(QCoreApplication::translate("Calculator", "6", nullptr));
+        MemClear->setText(QCoreApplication::translate("Calculator", "M-", nullptr));
+        Multiply->setText(QCoreApplication::translate("Calculator", "*", nullptr));
+        Divide->setText(QCoreApplication::translate("Calculator", "/", nullptr));
+        Button8->setText(QCoreApplication::translate("Calculator", "8", nullptr));
+        Button9->setText(QCoreApplication::translate("Calculator", "9", nullptr));
+        Clear->setText(QCoreApplication::translate("Calculator", "AC", nullptr));
+        Button2->setText(QCoreApplication::translate("Calculator", "2", nullptr));
+        Button0->setText(QCoreApplication::translate("Calculator", "0", nullptr));
+        Button3->setText(QCoreApplication::translate("Calculator", "3", nullptr));
+        ChangeSign->setText(QCoreApplication::translate("Calculator", "+/-", nullptr));
+        Subtract->setText(QCoreApplication::translate("Calculator", "-", nullptr));
+        Add->setText(QCoreApplication::translate("Calculator", "+", nullptr));
+        MemGet->setText(QCoreApplication::translate("Calculator", "M", nullptr));
+        Equals->setText(QCoreApplication::translate("Calculator", "=", nullptr));
         Display->setText(QCoreApplication::translate("Calculator", "0.0", nullptr));
     } // retranslateUi
 
