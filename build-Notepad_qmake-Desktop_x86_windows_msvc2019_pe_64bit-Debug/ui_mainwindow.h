@@ -17,6 +17,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
+#include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -28,8 +29,8 @@ public:
     QAction *actionNew;
     QAction *actionOpen;
     QAction *actionSave_as;
+    QAction *actionPrint;
     QAction *actionExit;
-    QAction *actionExit_2;
     QAction *actionCopy;
     QAction *actionPaste;
     QAction *actionCut;
@@ -42,7 +43,8 @@ public:
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuEdit;
-    QStatusBar *statusbar;
+    QStatusBar *statusBar;
+    QToolBar *MainToolBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -56,12 +58,18 @@ public:
         actionNew->setIcon(icon);
         actionOpen = new QAction(MainWindow);
         actionOpen->setObjectName("actionOpen");
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/imgs/Open.bmp"), QSize(), QIcon::Normal, QIcon::Off);
+        actionOpen->setIcon(icon1);
         actionSave_as = new QAction(MainWindow);
         actionSave_as->setObjectName("actionSave_as");
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/imgs/Save.bmp"), QSize(), QIcon::Normal, QIcon::On);
+        actionSave_as->setIcon(icon2);
+        actionPrint = new QAction(MainWindow);
+        actionPrint->setObjectName("actionPrint");
         actionExit = new QAction(MainWindow);
         actionExit->setObjectName("actionExit");
-        actionExit_2 = new QAction(MainWindow);
-        actionExit_2->setObjectName("actionExit_2");
         actionCopy = new QAction(MainWindow);
         actionCopy->setObjectName("actionCopy");
         actionPaste = new QAction(MainWindow);
@@ -94,22 +102,28 @@ public:
         menuEdit = new QMenu(menubar);
         menuEdit->setObjectName("menuEdit");
         MainWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName("statusbar");
-        MainWindow->setStatusBar(statusbar);
+        statusBar = new QStatusBar(MainWindow);
+        statusBar->setObjectName("statusBar");
+        MainWindow->setStatusBar(statusBar);
+        MainToolBar = new QToolBar(MainWindow);
+        MainToolBar->setObjectName("MainToolBar");
+        MainWindow->addToolBar(Qt::TopToolBarArea, MainToolBar);
 
         menubar->addAction(menuFile->menuAction());
         menubar->addAction(menuEdit->menuAction());
         menuFile->addAction(actionNew);
         menuFile->addAction(actionOpen);
         menuFile->addAction(actionSave_as);
+        menuFile->addAction(actionPrint);
         menuFile->addAction(actionExit);
-        menuFile->addAction(actionExit_2);
         menuEdit->addAction(actionCopy);
         menuEdit->addAction(actionPaste);
         menuEdit->addAction(actionCut);
         menuEdit->addAction(actionUndo);
         menuEdit->addAction(actionRedo);
+        MainToolBar->addAction(actionNew);
+        MainToolBar->addAction(actionOpen);
+        MainToolBar->addAction(actionSave_as);
 
         retranslateUi(MainWindow);
 
@@ -122,8 +136,8 @@ public:
         actionNew->setText(QCoreApplication::translate("MainWindow", "New", nullptr));
         actionOpen->setText(QCoreApplication::translate("MainWindow", "Open", nullptr));
         actionSave_as->setText(QCoreApplication::translate("MainWindow", "Save as", nullptr));
-        actionExit->setText(QCoreApplication::translate("MainWindow", "Print", nullptr));
-        actionExit_2->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
+        actionPrint->setText(QCoreApplication::translate("MainWindow", "Print", nullptr));
+        actionExit->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
         actionCopy->setText(QCoreApplication::translate("MainWindow", "Copy", nullptr));
         actionPaste->setText(QCoreApplication::translate("MainWindow", "Paste", nullptr));
         actionCut->setText(QCoreApplication::translate("MainWindow", "Cut", nullptr));
@@ -131,6 +145,7 @@ public:
         actionRedo->setText(QCoreApplication::translate("MainWindow", "Redo", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
+        MainToolBar->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar", nullptr));
     } // retranslateUi
 
 };
