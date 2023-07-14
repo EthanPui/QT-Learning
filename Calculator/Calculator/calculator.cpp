@@ -40,6 +40,8 @@ Calculator::Calculator(QWidget *parent)
             SLOT(EqualButtonPressed()));
     connect(ui->ChangeSign, SIGNAL(released()), this,
             SLOT(ChangeNumberSign()));
+    connect(ui->Clear, SIGNAL(released()), this,
+            SLOT(ClearButtonPressed()));
 }
 
 Calculator::~Calculator()
@@ -128,4 +130,9 @@ void Calculator::ChangeNumberSign(){
         double dblDisplayValSign = -1 * dblDisplayVal;
         ui->Display->setText(QString::number(dblDisplayValSign));
     }
+}
+
+void Calculator::ClearButtonPressed(){
+
+    ui->Display->setText("0");
 }
