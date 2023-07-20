@@ -2,7 +2,6 @@
 #include "ui_calculator.h"
 #include <QRegularExpression>
 
-double testVal =100;
 double calcVal =0.0;
 QString saveCurrentValue;
 bool divTrigger = false;
@@ -149,5 +148,10 @@ void Calculator::on_MemAdd_clicked()
 void Calculator::on_MemGet_clicked()
 {
     ui->Display->setText(QString::number(saveCurrentValue.toDouble()));
+}
+
+void Calculator::on_MemClear_clicked()
+{
+    saveCurrentValue = "0.0";
 }
 
