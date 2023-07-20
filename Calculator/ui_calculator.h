@@ -54,7 +54,7 @@ public:
     {
         if (Calculator->objectName().isEmpty())
             Calculator->setObjectName("Calculator");
-        Calculator->resize(404, 316);
+        Calculator->resize(401, 316);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -449,7 +449,7 @@ public:
         Calculator->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Calculator);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 404, 22));
+        menubar->setGeometry(QRect(0, 0, 401, 22));
         Calculator->setMenuBar(menubar);
         statusbar = new QStatusBar(Calculator);
         statusbar->setObjectName("statusbar");
