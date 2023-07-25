@@ -144,7 +144,6 @@ void Calculator::on_MemAdd_clicked()
 //    QTextStream(stdout) << saveCurrentValue << "\n";
 }
 
-
 void Calculator::on_MemGet_clicked()
 {
     ui->Display->setText(QString::number(saveCurrentValue.toDouble()));
